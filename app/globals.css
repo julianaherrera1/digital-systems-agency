@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: #0a0a0a;
-  color: white;
+  background-color: #0B0F19;
+  color: #F9FAFB;
+  font-family: var(--font-sans);
 }
 
 ::selection {
@@ -15,12 +16,6 @@ body {
   color: black;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
