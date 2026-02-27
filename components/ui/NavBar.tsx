@@ -20,7 +20,7 @@ export default function NavBar() {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-8 text-sm text-gray-300">
                         <a href="#home" className="hover:text-cyan-400 transition">Home</a>
-                        <a href="#problems" className="hover:text-cyan-400 transition">Problems</a>
+                        <a href="#challenges" className="hover:text-cyan-400 transition">Challenges</a>
                         <a href="#solutions" className="hover:text-cyan-400 transition">Solutions</a>
                         <a href="#process" className="hover:text-cyan-400 transition">Process</a>
                         <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
@@ -51,7 +51,7 @@ export default function NavBar() {
                 <div className="md:hidden bg-black border-t border-white/10 px-6 pb-4">
                     <div className="flex flex-col space-y-4 mt-4 text-gray-300">
                         <a href="#home" className="hover:text-cyan-400 transition">Home</a>
-                        <a href="#problems" className="hover:text-cyan-400 transition">Problems</a>
+                        <a href="#challenges" className="hover:text-cyan-400 transition">Challenges</a>
                         <a href="#solutions" className="hover:text-cyan-400 transition">Solutions</a>
                         <a href="#process" className="hover:text-cyan-400 transition">Process</a>
                         <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
