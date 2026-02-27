@@ -3,6 +3,7 @@ import NavBar from "@/components/ui/NavBar";
 import Challenges from "@/components/sections/Challenges";
 import Solutions from "@/components/sections/Solutions";
 import Process from "@/components/sections/Process";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Challenges />
       <Solutions />
       <Process />
+      <Projects />
     </main>
   );
 }
