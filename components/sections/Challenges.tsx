@@ -42,9 +42,9 @@ export default function Challenges() {
                 {/* CTA - exactamente igual que Hero */}
                 <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center">
                     {/* Primary - mismo estilo que Hero */}
-                    <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+                    <a className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300" href="#solutions">
                         See how we solve this
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
