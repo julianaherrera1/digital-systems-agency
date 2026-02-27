@@ -6,7 +6,7 @@ export default function Hero() {
 
       <div className="max-w-5xl mx-auto">
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-6xl font-light leading-tight tracking-tight">
           We transform your business into{" "}
           <span className="text-cyan-400">
             an intelligent digital system
@@ -19,16 +19,20 @@ export default function Hero() {
           We connect them with automation, CRM and AI to help you increase revenue and eliminate manual work.
         </p>
 
-          {/* CTA */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg hover:scale-105 transition">
-            Contact us
-          </button>
+       {/* CTA */}
+      <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 
-          <button className="px-8 py-3 border border-white/20 rounded-lg hover:bg-white/10 transition">
-            View our work
-          </button>
-        </div>
+        {/* Primary */}
+        <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+          Contact Us
+        </button>
+
+        {/* Secondary */}
+        <button className="px-8 py-3 border border-white/20 text-white font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 transition-all duration-300">
+          View Our Work
+        </button>
+
+      </div>
 
       </div>
 
