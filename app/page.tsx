@@ -6,6 +6,7 @@ import Process from "@/components/sections/Process";
 import Projects from "@/components/sections/Projects";
 import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Projects />
       <Team />
       <Contact />
+      <Footer />
     </main>
   );
 }
