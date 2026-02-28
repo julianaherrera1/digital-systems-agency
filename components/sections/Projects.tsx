@@ -52,55 +52,61 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-28 px-6 border-t border-white/10">
-      <div className="max-w-5xl mx-auto">
+    <section id="projects" className="relative py-28 px-6 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.3), transparent_70%)]" />
+      
+      <div className="max-w-5xl mx-auto text-center">
 
-        {/* Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Our <span className="text-cyan-400">Projects</span>
-          </h2>
-          <p className="mt-5 text-gray-400 max-w-xl mx-auto">
-            Our portfolio features frontend, backend, and fullstack projects developed with technologies such as Laravel, PHP, Java, and modern web frameworks. Each solution is designed to drive efficiency, scalability, and measurable business growth.
-          </p>
-        </div>
+        {/* Headline */}
+        <h2 className="text-4xl md:text-6xl lg:text-6xl font-light leading-tight tracking-tight">
+          Our{" "}
+          <span className="text-cyan-400">
+            Projects
+          </span>
+        </h2>
+
+        {/* Subheadline */}
+        <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+          Our portfolio features frontend, backend, and fullstack projects developed with technologies such as Laravel, PHP, Java, and modern web frameworks. Each solution is designed to drive efficiency, scalability, and measurable business growth.
+        </p>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-10 justify-center">
-
+        <div className="mt-16 grid md:grid-cols-2 gap-6 justify-center">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-cyan-400/40 transition"
+              className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-cyan-400/50 hover:bg-white/[0.07] transition-all duration-300 text-left flex flex-col h-full"
             >
-              <h3 className="text-xl font-semibold mb-3">
+              <h3 className="text-2xl font-light text-white mb-4">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 mb-5 text-sm">
+              <p className="text-gray-400 leading-relaxed mb-6">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-8">
                 {project.technologies.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300"
+                    className="text-xs bg-white/10 px-3 py-1.5 rounded-full text-gray-300 border border-white/5"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
 
+              {/* Botón con mt-auto para que siempre se mantenga abajo */}
               <button
                 onClick={() => setSelectedProject(project)}
-                className="text-cyan-400 text-sm font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all duration-300 mt-auto pt-4"
               >
-                View Project →
+                View Project
+                <span className="text-lg">→</span>
               </button>
             </div>
           ))}
-
         </div>
       </div>
 
@@ -110,7 +116,7 @@ export default function Projects() {
           <div className="bg-[#111827] max-w-lg w-full p-8 rounded-xl border border-white/10 relative">
             <button
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-gray-400"
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
             >
               ✕
             </button>
@@ -119,7 +125,7 @@ export default function Projects() {
               {selectedProject.title}
             </h3>
 
-            <p className="text-gray-400 mb-6 text-sm">
+            <p className="text-gray-400 mb-6 text-sm whitespace-pre-line leading-relaxed">
               {selectedProject.details}
             </p>
 
