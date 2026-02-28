@@ -1,5 +1,7 @@
 "use client";
 
+import { Linkedin, Github } from "lucide-react";
+
 interface TeamMember {
     name: string;
     role: string;
@@ -42,90 +44,106 @@ const team: TeamMember[] = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-28 px-6 border-t border-white/10">
-      <div className="max-w-5xl mx-auto">
+    <section id="team" className="relative py-28 px-6 overflow-hidden">
+      {/* Background glow - consistente con todas las secciones */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.3), transparent_70%)]" />
+      
+      <div className="max-w-6xl mx-auto text-center">
 
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Meet the <span className="text-cyan-400">Team</span>
-          </h2>
-          <p className="mt-5 text-gray-400 max-w-2xl mx-auto">
-            We are a multidisciplinary team combining technical expertise and strategic thinking 
-            to build scalable web platforms and intelligent systems for modern businesses.
-          </p>
-        </div>
+        {/* Headline - mismo estilo que todas las secciones */}
+        <h2 className="text-4xl md:text-6xl lg:text-6xl font-light leading-tight tracking-tight">
+          Meet the{" "}
+          <span className="text-cyan-400">
+            Team
+          </span>
+        </h2>
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-10">
+        {/* Subheadline - mismo estilo que las demás secciones */}
+        <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+          We are a multidisciplinary team combining technical expertise and strategic thinking 
+          to build scalable web platforms and intelligent systems for modern businesses.
+        </p>
 
+        {/* Grid - 3 columnas en desktop */}
+        <div className="mt-16 grid md:grid-cols-3 gap-6">
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-8 text-center hover:border-cyan-400/40 hover:-translate-y-1 transition duration-300"
+              className="group bg-white/5 border border-white/10 rounded-xl p-8 text-center hover:border-cyan-400/50 hover:bg-white/[0.07] transition-all duration-300 flex flex-col h-full"
             >
-
-              {/* Image */}
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border border-white/10">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                />
+              {/* Image with glow effect */}
+              <div className="relative mb-6">
+                <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative w-28 h-28 mx-auto rounded-full overflow-hidden border-2 border-white/10 group-hover:border-cyan-400/50 transition-all duration-300">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
 
               {/* Name */}
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-2xl font-light text-white mb-2">
                 {member.name}
               </h3>
 
               {/* Role */}
-              <p className="text-cyan-400 text-sm mb-4">
+              <p className="text-cyan-400 text-base mb-4">
                 {member.role}
               </p>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed mb-6">
                 {member.description}
               </p>
 
               {/* Specialties */}
-              <div className="flex flex-wrap justify-center gap-2 mb-6">
+              <div className="flex flex-wrap justify-center gap-2 mb-8">
                 {member.specialities.map((skill, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300"
+                    className="text-xs bg-white/10 px-3 py-1.5 rounded-full text-gray-300 border border-white/5"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
 
-              {/* Social Links */}
-              <div className="flex justify-center gap-4 text-sm text-gray-400">
+              {/* Social Links - siempre al fondo con mt-auto */}
+              <div className="flex justify-center gap-4 mt-auto pt-4">
                 {member.linkedin && (
                   <a
                     href={member.linkedin}
                     target="_blank"
-                    className="hover:text-cyan-400 transition"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/5 rounded-lg border border-white/10 hover:border-cyan-400/50 hover:bg-cyan-400/10 transition-all duration-300"
+                    aria-label={`${member.name}'s LinkedIn`}
                   >
-                    LinkedIn
+                    <Linkedin size={18} className="text-gray-400 group-hover:text-cyan-400 transition-colors" />
                   </a>
                 )}
                 {member.github && (
                   <a
                     href={member.github}
                     target="_blank"
-                    className="hover:text-cyan-400 transition"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-white/5 rounded-lg border border-white/10 hover:border-cyan-400/50 hover:bg-cyan-400/10 transition-all duration-300"
+                    aria-label={`${member.name}'s GitHub`}
                   >
-                    GitHub
+                    <Github size={18} className="text-gray-400 group-hover:text-cyan-400 transition-colors" />
                   </a>
                 )}
               </div>
-
             </div>
           ))}
+        </div>
 
+        {/* CTA opcional - mismo estilo que otras secciones */}
+        <div className="mt-16">
+          <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+            Join our team
+          </button>
         </div>
       </div>
     </section>
