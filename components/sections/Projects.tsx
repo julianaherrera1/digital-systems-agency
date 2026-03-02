@@ -26,7 +26,15 @@ const projects: Project[] = [
         Upcoming features include role-based access control, advanced product modules and an analytics dashboard for business insights.
         `,
         images: [
-
+          "/projects/minegocioapp/homePage.png",
+          "/projects/minegocioapp/panelAdministrador.png",
+          "/projects/minegocioapp/panelAdmin2.png",
+          "/projects/minegocioapp/panelCliente1.png",
+          "/projects/minegocioapp/panelCliente2.png",
+          "/projects/minegocioapp/panelCliente3.png",
+          "/projects/minegocioapp/panelEmprendedor1.png",
+          "/projects/minegocioapp/panelEmprendedor2.png",
+          "/projects/minegocioapp/panelEmprendedor3.png",
         ]
   },
     {
@@ -43,7 +51,12 @@ const projects: Project[] = [
     The website is fully responsive and optimized for performance.
     `,
      images: [
-            
+            "/projects/solanoAzul/homePage.png",
+            "/projects/solanoAzul/secondSection.png",
+            "/projects/solanoAzul/productsSection.png",
+            "/projects/solanoAzul/howToBuySection.png",
+            "/projects/solanoAzul/contactSection.png",
+            "/projects/solanoAzul/footerSection.png",
         ]
     }
 ];
@@ -111,37 +124,62 @@ export default function Projects() {
       </div>
 
       {/* Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center px-6 z-50">
-          <div className="bg-[#111827] max-w-lg w-full p-8 rounded-xl border border-white/10 relative">
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-            >
-              ✕
-            </button>
+     {selectedProject && (
+  <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center px-6 py-10 z-50">
+    
+    <div className="bg-[#0f172a] w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-2xl border border-white/10 relative p-10">
 
-            <h3 className="text-2xl font-semibold mb-4">
-              {selectedProject.title}
-            </h3>
+      {/* Close button */}
+      <button
+        onClick={() => setSelectedProject(null)}
+        className="absolute top-6 right-6 text-gray-400 hover:text-white transition"
+      >
+        ✕
+      </button>
 
-            <p className="text-gray-400 mb-6 text-sm whitespace-pre-line leading-relaxed">
-              {selectedProject.details}
-            </p>
+      {/* Title */}
+      <h3 className="text-3xl font-light mb-6">
+        {selectedProject.title}
+      </h3>
 
-            <div className="flex flex-wrap gap-2">
-              {selectedProject.technologies.map((tech, i) => (
-                <span
-                  key={i}
-                  className="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+      {/* Image */}
+      {selectedProject.images.length > 0 && (
+      <div className="mb-8">
+        <div className="flex gap-4 overflow-x-auto pb-2">
+          {selectedProject.images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${selectedProject.title} ${index + 1}`}
+              className="min-w-[300px] md:min-w-[400px] rounded-xl border border-white/10 flex-shrink-0"
+            />
+          ))}
         </div>
-      )}
+      </div>
+    )}
+
+      {/* Description */}
+      <p className="text-gray-400 text-sm leading-relaxed whitespace-pre-line mb-8">
+        {selectedProject.details}
+      </p>
+
+      {/* Technologies */}
+      <div className="flex flex-wrap gap-2">
+        {selectedProject.technologies.map((tech, i) => (
+          <span
+            key={i}
+            className="text-xs bg-white/10 px-3 py-1.5 rounded-full text-gray-300 border border-white/5"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+    </div>
+  </div>
+)}
+
+
     </section>
   );
 }

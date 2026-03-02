@@ -24,7 +24,7 @@ const team: TeamMember[] = [
     },
      {
         name: "Tatiana Rubio",
-        role: "Frontend Developer",
+        role: "Backend Developer",
         description: "Specialized in designing robust APIs, database architecture and secure authentication systems.",
         specialities: ["Java", "APIs", "AI Integration"],
         image: "/team/tatiana.jpg",

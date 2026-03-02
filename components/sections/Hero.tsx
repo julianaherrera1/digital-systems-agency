@@ -28,9 +28,9 @@ export default function Hero() {
         </button>
 
         {/* Secondary */}
-        <button className="px-8 py-3 border border-white/20 text-white font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 transition-all duration-300">
+        <a href="#projects" className="px-8 py-3 border border-white/20 text-white font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 transition-all duration-300">
           View Our Work
-        </button>
+        </a>
 
       </div>
 
