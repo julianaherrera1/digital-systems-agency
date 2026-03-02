@@ -40,7 +40,7 @@ export default function NavBar() {
 
             {/* Desktop Navigation - Minimal */}
             <div className="hidden md:flex items-center gap-8">
-              {["Home", "Challenges", "Solutions", "Process", "Projects", "Team"].map(
+              {["Home", "Challenges", "Solutions", "Process", "Projects", "Team", "Contact"].map(
                 (item) => (
                   <a
                     key={item}
@@ -83,7 +83,7 @@ export default function NavBar() {
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-[var(--background-elevated)] border-b border-[var(--border)]">
             <div className="px-6 py-4 space-y-3">
-              {["Home", "Challenges", "Solutions", "Process", "Projects", "Team"].map(
+              {["Home", "Challenges", "Solutions", "Process", "Projects", "Team", "Contact"].map(
                 (item) => (
                   <a
                     key={item}
