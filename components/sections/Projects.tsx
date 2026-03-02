@@ -51,12 +51,12 @@ const projects: Project[] = [
     The website is fully responsive and optimized for performance.
     `,
      images: [
-            "/projects/solanoAzul/homePage.png",
-            "/projects/solanoAzul/secondSection.png",
-            "/projects/solanoAzul/productsSection.png",
-            "/projects/solanoAzul/howToBuySection.png",
-            "/projects/solanoAzul/contactSection.png",
-            "/projects/solanoAzul/footerSection.png",
+            "/projects/solanoazul/homePage.png",
+            "/projects/solanoazul/secondSection.png",
+            "/projects/solanoazul/productsSection.png",
+            "/projects/solanoazul/howToBuySection.png",
+            "/projects/solanoazul/contactSection.png",
+            "/projects/solanoazul/footerSection.png",
         ]
     }
 ];
