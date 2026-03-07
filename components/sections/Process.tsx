@@ -81,9 +81,9 @@ export default function Process() {
 
                 {/* CTA - mismo estilo que Hero, Challenges y Solutions */}
                 <div className="mt-20 flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+                    <a href="https://wa.me/573117249900?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
                         Start your journey
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

@@ -35,10 +35,10 @@ export default function Solutions() {
               operations. Built to convert, scale and integrate with your workflows.
             </p>
             
-            <button className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all duration-300 mt-auto">
+            <a href="#projects" className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all duration-300 mt-auto">
               Explore Development
               <ArrowRight size={18} className="text-cyan-400" />
-            </button>
+            </a>
           </div>
 
           {/* Card 2 */}
@@ -55,18 +55,18 @@ export default function Solutions() {
               customer journey.
             </p>
             
-            <button className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all duration-300 mt-auto">
+            <a href="https://wa.me/3117249900?text=Hello!%20I'm%20interested%20in%20your%20AI%20and%20automation%20services.%20I'd%20like%20to%20explore%20how%20AI%20agents%2C%20workflow%20automation%2C%20or%20custom%20systems%20could%20help%20optimize%20my%20business%20processes." target="_blank" className="inline-flex items-center gap-2 text-cyan-400 font-medium hover:gap-3 transition-all duration-300 mt-auto">
               Discover Automation
               <ArrowRight size={18} className="text-cyan-400" />
-            </button>
+            </a>
           </div>
         </div>
 
         {/* CTA - mismo estilo que Hero y Challenges */}
         <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+          <a href="https://wa.me/573117249900?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
             Start your project
-          </button>
+          </a>
           <a href="#projects" className="px-8 py-3 border border-white/20 text-white font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 transition-all duration-300">
             View our work
           </a>

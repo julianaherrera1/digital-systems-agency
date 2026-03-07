@@ -141,9 +141,9 @@ export default function Team() {
 
         {/* CTA opcional - mismo estilo que otras secciones */}
         <div className="mt-16">
-          <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+          <a href="https://wa.me/3117249900?text=Hello!%20I'm%20interested%20in%20joining%20your%20team%20or%20collaborating%20on%20future%20projects.%20I'd%20love%20to%20learn%20more%20about%20available%20opportunities."  target="_blank" className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
             Join our team
-          </button>
+          </a>
         </div>
       </div>
     </section>

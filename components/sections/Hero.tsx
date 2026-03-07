@@ -23,9 +23,9 @@ export default function Hero() {
       <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 
         {/* Primary */}
-        <button className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
+        <a href="https://wa.me/573117249900?text=Hello%20I'm%20interested%20in%20your%20services" target="_blank" className="px-8 py-3 bg-cyan-400 text-black font-medium rounded-lg shadow-md hover:shadow-cyan-400/30 hover:-translate-y-0.5 transition-all duration-300">
           Contact Us
-        </button>
+        </a>
 
         {/* Secondary */}
         <a href="#projects" className="px-8 py-3 border border-white/20 text-white font-medium rounded-lg hover:border-cyan-400 hover:text-cyan-400 hover:bg-white/5 transition-all duration-300">

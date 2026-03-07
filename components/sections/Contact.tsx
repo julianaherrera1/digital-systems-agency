@@ -87,7 +87,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-400 mb-1">Phone</h4>
-                  <p className="text-white">+57 300 123 4567</p>
+                  <p className="text-white">+57 311 724 9900</p>
                 </div>
               </div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-400 mb-1">Email</h4>
-                  <p className="text-white">hello@youragency.com</p>
+                  <p className="text-white">iaagency@gmail.com</p>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm text-gray-400 mb-1">WhatsApp</h4>
                   <a
-                    href="https://wa.me/573001234567"
+                    href="https://wa.me/573117249900"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-cyan-400 transition-colors inline-flex items-center gap-1"
