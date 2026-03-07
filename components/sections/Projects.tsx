@@ -58,6 +58,25 @@ const projects: Project[] = [
             "/projects/solanoazul/contactSection.png",
             "/projects/solanoazul/footerSection.png",
         ]
+    },
+      {
+    title: "Turismo por Antoquia",
+    description: "Web application designed to promote tourist destinations across the Antioquia region, providing users with information about municipalities, attractions, transportation options, and travel guides.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Java", "MySQL"],
+    details: `
+   Turismo por Antioquia is a web application developed to promote tourist destinations across the Antioquia region, providing users with information about different municipalities, local attractions, transportation options, and travel guides.
+
+  The platform organizes its content into dedicated sections for specific destinations such as Guatapé, Jardín, and San Rafael, allowing users to easily navigate between pages and access relevant information for planning trips within the department.
+
+  The project was built using HTML5, CSS3, and JavaScript for the structure, visual design, and user interface interactions. Additionally, Java components were implemented to simulate basic data processing logic, while MySQL was used to model the database structure for managing tourism-related information.
+    `,
+     images: [
+            "/projects/turismoPorAntioquia/1.jpeg",
+            "/projects/turismoPorAntioquia/2.jpeg",
+            "/projects/turismoPorAntioquia/3.jpeg",
+            "/projects/turismoPorAntioquia/4.jpeg",
+            "/projects/turismoPorAntioquia/5.jpeg"
+        ]
     }
 ];
 
